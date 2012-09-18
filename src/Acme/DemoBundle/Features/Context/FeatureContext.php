@@ -36,6 +36,7 @@ class FeatureContext extends BehatContext
         parent::__construct($kernel);
 
         $this->useContext('mink', new MinkContext($kernel));            
+        $this->useContext('demo', new DemoContext($kernel));            
     }
                   
     /**
