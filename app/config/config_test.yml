@@ -12,3 +12,12 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+    
+mink:
+    base_url:   http://demo/app_test.php  
+    default_session: symfony
+#    javascript_session:  zombie
+    zombie: ~    
+#    goutte: ~
+#    sahi:   ~
+    

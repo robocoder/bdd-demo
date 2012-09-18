@@ -19,6 +19,11 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
         );
 
+        if ('test' === $this->getEnvironment()) {
+            $bundles[] = new Behat\BehatBundle\BehatBundle();
+            $bundles[] = new Behat\MinkBundle\MinkBundle();            
+        }                
+        
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
