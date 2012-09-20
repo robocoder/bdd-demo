@@ -1,0 +1,56 @@
+{% extends "::base.html.twig" %}
+
+{% block title "A Box Demo" %}
+
+{% block body %}
+
+  <style>
+     .red { background-color: red; }
+     .green { background-color: green; }
+     .yellow { background-color: yellow; }
+  </style>
+
+
+  <div id="box" style="width:450px; height:300px; margin:0 auto;">
+      <select id="color-select">
+          {%for option in options %}
+             <option value="{{ option|lower }}">{{ option }}</option>
+          {%endfor%}
+      </select>
+  </div>
+
+
+  <script>
+
+      function pluckValues(select_elem) {
+          var values = [];
+          var options = $(select_elem).children('option');
+          $(options).each(function(){
+            var val = $(this).attr('value');
+            if (!val) return;
+            values.push(val);
+          });
+          
+          return values;
+      }
+
+
+
+        $('#color-select').change(function(){
+            var val = $(this).val();
+            var box = $('#box');
+
+            val = $.trim(val);
+            
+            var color_options = pluckValues(this);
+            $(color_options).each(function(key, value){
+              box.removeClass(value);
+            });
+                        
+            box.addClass(val);
+        });
+
+    </script>  
+
+
+{% endblock %}

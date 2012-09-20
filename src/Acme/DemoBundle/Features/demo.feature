@@ -3,7 +3,7 @@ Feature:
   In order to be inspired
   I need the ability to see some stuff on a page
 
-@mink:zombie
+@mink:zombie @Story-123 @web-services
 Scenario: Default
   Given I am on "/demo/box"
    Then the response status code should be 200
@@ -16,14 +16,14 @@ Scenario: Default
      |Green          |
      |Yellow         |
  
-   When I select "red" from "color-select"
+   When I select "Red" from "color-select"
    Then The Box should be color "red"
 
-   When I select "green" from "color-select"
+   When I select "Green" from "color-select"
    Then The Box should be color "green"
     And The Box should not be color "red"
 
-   When I select "yellow" from "color-select"
+   When I select "Yellow" from "color-select"
    Then The Box should be color "yellow"
     And The Box should not be color "red"
     And The Box should not be color "green"
