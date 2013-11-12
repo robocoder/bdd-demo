@@ -1,0 +1,73 @@
+{
+    "name": "robocoder/bdd-demo",
+    "license": "MIT",
+    "type": "project",
+    "description": "BDD Demo",
+    "authors": [
+        {
+            "name": "Robert Rotarius",
+            "email": "robert@rotarius.com"
+        },
+        {
+            "name": "Anthon Pang",
+            "email": "apang@softwaredevelopment.ca"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.3.*",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle": "1.2.*",
+        "twig/extensions": "1.0.*",
+        "symfony/assetic-bundle": "2.3.*",
+        "symfony/swiftmailer-bundle": "2.3.*",
+        "symfony/monolog-bundle": "2.3.*",
+        "sensio/distribution-bundle": "2.3.*",
+        "sensio/framework-extra-bundle": "2.3.*",
+        "sensio/generator-bundle": "2.3.*",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "vipsoft/code-coverage-bundle": "dev-master"
+    },
+    "require-dev": {
+        "behat/behat": "2.5.x-dev",
+        "behat/mink": "1.5.x-dev",
+        "behat/gherkin": "2.3.x-dev",
+        "behat/mink-extension": "1.2.0",
+        "behat/mink-goutte-driver": "dev-master",
+        "behat/mink-selenium2-driver": "dev-master",
+        "behat/symfony2-extension": "dev-master",
+        "instaclick/php-webdriver": "1.1",
+        "vipsoft/code-coverage-extension": "dev-master",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "2.3-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}

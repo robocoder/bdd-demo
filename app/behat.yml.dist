@@ -1,0 +1,43 @@
+# behat.yml
+default:
+  paths:
+    features:  /var/www/bdd-demo/src/
+    bootstrap: /var/www/bdd-demo/src/Acme/DemoBundle/Features/Context
+
+  extensions:
+    Behat\Symfony2Extension\Extension:
+      mink_driver:     true
+
+    Behat\MinkExtension\Extension:
+      base_url:           'http://localhost/'
+      goutte:             ~
+      selenium2:
+        capabilities:
+          proxy:
+            proxyType:    autodetect
+        wd_host:          http://127.0.0.1:4444/wd/hub
+      default_session:    goutte
+      javascript_session: selenium2
+
+    VIPSoft\CodeCoverageExtension\Extension:
+      auth:       ~
+      create:
+        method:   POST
+        path:     /_coverage/
+      read:
+        method:   GET
+        path:     /_coverage/
+      delete:
+        method:   DELETE
+        path:     /_coverage/
+      drivers:
+        - remote
+        - local
+      filter:     ~
+      report:
+        format:   html
+        options:
+          target: /var/www/bdd-demo/web/behat-coverage
+
+  context:
+    class: Acme\DemoBundle\Features\Context\FeatureContext

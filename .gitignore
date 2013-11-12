@@ -1,10 +1,11 @@
 /web/bundles/
-/app/bootstrap*
+/app/bootstrap.php.cache
 /app/cache/*
+/app/config/parameters.yml
 /app/logs/*
-/vendor/
-/app/config/parameters.ini
-/nbproject/*
-*.php~
+!app/cache/.gitkeep
+!app/logs/.gitkeep
 /build/
-/coverage
+/vendor/
+/bin/
+/composer.phar

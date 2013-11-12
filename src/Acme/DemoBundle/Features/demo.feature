@@ -3,7 +3,7 @@ Feature:
   In order to be inspired
   I need the ability to see some stuff on a page
 
-@mink:zombie @Story-123 @web-services
+@mink:goutte @Story-123 @web-services
 Scenario: Default
   Given I am on "/demo/box"
    Then the response status code should be 200

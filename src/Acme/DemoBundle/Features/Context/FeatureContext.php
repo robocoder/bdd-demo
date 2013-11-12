@@ -2,7 +2,7 @@
 
 namespace Acme\DemoBundle\Features\Context;
 
-use Behat\BehatBundle\Context\BehatContext;
+use Behat\MinkExtension\Context\MinkContext;
 
 use Behat\Behat\Context\ClosuredContextInterface,
     Behat\Behat\Context\TranslatedContextInterface,
@@ -16,6 +16,9 @@ use Behat\Gherkin\Node\PyStringNode,
 
 use Behat\Mink\Exception\ElementNotFoundException;
 
+use Behat\Symfony2Extension\Context\KernelAwareInterface;
+use Symfony\Component\HttpKernel\KernelInterface;
+
 use Behat\Behat\Context\Step\When;
 
 use Doctrine\Common\DataFixtures\Loader;
@@ -25,59 +28,56 @@ use Doctrine\Common\DataFixtures\Purger\MongoDBPurger;
 require_once 'PHPUnit/Autoload.php';
 require_once 'PHPUnit/Framework/Assert/Functions.php';
 
-
 /**
  * Feature context.
  */
-class FeatureContext extends BehatContext 
+class FeatureContext extends MinkContext implements KernelAwareInterface
 {
-    public function __construct($kernel) 
-    {
-        parent::__construct($kernel);
+    /**
+     * @var KernelInterface Kernel
+     */
+    private $kernel;
 
-        $this->useContext('mink', new MinkContext($kernel));            
-        $this->useContext('demo', new DemoContext($kernel));            
+    /**
+     * {@inheritdoc}
+     */
+    public function setKernel(KernelInterface $kernel)
+    {
+        $this->kernel = $kernel;
     }
-                  
+
+    public function __construct()
+    {
+        $this->useContext('demo', new DemoContext());
+    }
+
     /**
      *
-     * @return type 
+     * @return type
      */
     public function getDocumentManager()
     {
-        return $this->getContainer()->get('doctrine.odm.mongodb.document_manager');       
+        return $this->getContainer()->get('doctrine.odm.mongodb.document_manager');
     }
-    
+
     /**
      * Alias of getDocumentManager()
-     * 
-     * @return type 
+     *
+     * @return type
      */
     public function getDm()
     {
         return $this->getDocumentManager();
     }
-    
+
     /**
-     * 
+     *
      */
-    public function hasClass($elem, $class) 
+    public function hasClass($elem, $class)
     {
         $classes = $elem->getAttribute('class');
         $classes = explode(' ', $classes);
-        
+
         return in_array($class, $classes);
     }
-        
-    /**
-     *
-     * @param string $name
-     */
-    public function getSession($name = null) 
-    {
-        return $this->getSubcontext('mink')->getSession($name);
-    }
-    
-    
-         
 }
