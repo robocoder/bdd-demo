@@ -33,7 +33,13 @@ default:
       drivers:
         - remote
         - local
-      filter:     ~
+      #filter: ~
+      filter:
+        whitelist:
+          include:
+            directories:
+              'src':
+                 suffix: .php
       report:
         format:   html
         options:

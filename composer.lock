@@ -300,12 +300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "59c310ba2aeea882c0fde6f47462462ba9ce9878"
+                "reference": "69e91a3ea72c120f2516cf7983df6e9b550d00ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/59c310ba2aeea882c0fde6f47462462ba9ce9878",
-                "reference": "59c310ba2aeea882c0fde6f47462462ba9ce9878",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/69e91a3ea72c120f2516cf7983df6e9b550d00ea",
+                "reference": "69e91a3ea72c120f2516cf7983df6e9b550d00ea",
                 "shasum": ""
             },
             "require": {
@@ -329,7 +329,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -356,7 +356,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-09-26 21:18:35"
+            "time": "2013-11-13 00:02:59"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -804,12 +804,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "516447f91312924c63fafd8e6083f28013dd03d9"
+                "reference": "ad859c3dbab166217f5b82d95e39c81a00a119f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/516447f91312924c63fafd8e6083f28013dd03d9",
-                "reference": "516447f91312924c63fafd8e6083f28013dd03d9",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/ad859c3dbab166217f5b82d95e39c81a00a119f2",
+                "reference": "ad859c3dbab166217f5b82d95e39c81a00a119f2",
                 "shasum": ""
             },
             "require": {
@@ -836,7 +836,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -863,7 +863,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-11-11 22:14:57"
+            "time": "2013-11-13 13:41:25"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1522,12 +1522,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "d5436e38e9012560660bcdc8d0e98d778641e414"
+                "reference": "59a4313a52071136fd06624323eb8cba5347aaba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/d5436e38e9012560660bcdc8d0e98d778641e414",
-                "reference": "d5436e38e9012560660bcdc8d0e98d778641e414",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/59a4313a52071136fd06624323eb8cba5347aaba",
+                "reference": "59a4313a52071136fd06624323eb8cba5347aaba",
                 "shasum": ""
             },
             "require": {
@@ -1622,7 +1622,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-11-09 15:59:42"
+            "time": "2013-11-13 21:27:40"
         },
         {
             "name": "twig/extensions",
@@ -1677,12 +1677,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "8f7bea047eb3aaded608ef3ac79e434c84eaf55d"
+                "reference": "2d012c4a4ae41cdf1682a10b3d567becc38a2d39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/8f7bea047eb3aaded608ef3ac79e434c84eaf55d",
-                "reference": "8f7bea047eb3aaded608ef3ac79e434c84eaf55d",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/2d012c4a4ae41cdf1682a10b3d567becc38a2d39",
+                "reference": "2d012c4a4ae41cdf1682a10b3d567becc38a2d39",
                 "shasum": ""
             },
             "require": {
@@ -1718,7 +1718,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-11-12 17:59:00"
+            "time": "2013-11-13 08:11:09"
         },
         {
             "name": "vipsoft/code-coverage-bundle",
@@ -1726,12 +1726,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vipsoft/code-coverage-bundle.git",
-                "reference": "44c5e73aa9d59d37d53ed35cd43d07f2083abae0"
+                "reference": "88ede22b0a9f58698214b2053577292bc67b7d5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vipsoft/code-coverage-bundle/zipball/44c5e73aa9d59d37d53ed35cd43d07f2083abae0",
-                "reference": "44c5e73aa9d59d37d53ed35cd43d07f2083abae0",
+                "url": "https://api.github.com/repos/vipsoft/code-coverage-bundle/zipball/88ede22b0a9f58698214b2053577292bc67b7d5c",
+                "reference": "88ede22b0a9f58698214b2053577292bc67b7d5c",
                 "shasum": ""
             },
             "require": {
@@ -1772,7 +1772,7 @@
                 "phpunit",
                 "testing"
             ],
-            "time": "2013-11-12 20:00:08"
+            "time": "2013-11-13 17:34:14"
         },
         {
             "name": "vipsoft/code-coverage-common",
@@ -1780,12 +1780,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vipsoft/code-coverage-common.git",
-                "reference": "a464627b1f58f58ae7b79f2a125dfbc0d0b2d73a"
+                "reference": "52ac2dd867953aa4a74ddad1f5ead825a54824bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vipsoft/code-coverage-common/zipball/a464627b1f58f58ae7b79f2a125dfbc0d0b2d73a",
-                "reference": "a464627b1f58f58ae7b79f2a125dfbc0d0b2d73a",
+                "url": "https://api.github.com/repos/vipsoft/code-coverage-common/zipball/52ac2dd867953aa4a74ddad1f5ead825a54824bf",
+                "reference": "52ac2dd867953aa4a74ddad1f5ead825a54824bf",
                 "shasum": ""
             },
             "require": {
@@ -1821,7 +1821,7 @@
                 "phpunit",
                 "testing"
             ],
-            "time": "2013-11-12 18:47:39"
+            "time": "2013-11-13 15:53:25"
         }
     ],
     "packages-dev": [
@@ -2664,12 +2664,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vipsoft/code-coverage-extension.git",
-                "reference": "e2ca32de1b9251bbf4dfe94f5e1c574d2d5b6617"
+                "reference": "b4ecef193de9c681193596b124ac4a2c44e2ed1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vipsoft/code-coverage-extension/zipball/e2ca32de1b9251bbf4dfe94f5e1c574d2d5b6617",
-                "reference": "e2ca32de1b9251bbf4dfe94f5e1c574d2d5b6617",
+                "url": "https://api.github.com/repos/vipsoft/code-coverage-extension/zipball/b4ecef193de9c681193596b124ac4a2c44e2ed1e",
+                "reference": "b4ecef193de9c681193596b124ac4a2c44e2ed1e",
                 "shasum": ""
             },
             "require": {
@@ -2712,7 +2712,7 @@
                 "phpunit",
                 "testing"
             ],
-            "time": "2013-11-12 19:06:38"
+            "time": "2013-11-13 22:53:55"
         }
     ],
     "aliases": [
