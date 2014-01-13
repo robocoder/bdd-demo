@@ -16,6 +16,12 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/robocoder/bdd-security.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
@@ -38,10 +44,15 @@
         "behat/mink-extension": "1.2.0",
         "behat/mink-goutte-driver": "dev-master",
         "behat/mink-selenium2-driver": "dev-master",
-        "behat/symfony2-extension": "dev-master",
+        "behat/symfony2-extension": "1.1.1",
         "instaclick/php-webdriver": "1.1",
-        "vipsoft/code-coverage-extension": "dev-master",
-        "phpunit/phpunit": "3.7.*"
+        "vipsoft/code-coverage-extension": "2.5.0.4",
+        "vipsoft/doctrine-data-fixtures-extension": "0.10.1",
+        "vipsoft/jira-extension": "1.0.10",
+        "vipsoft/bdd-security": "dev-master",
+        "sensiolabs/behat-page-object-extension": "*",
+        "phpunit/phpunit": "3.7.*",
+        "squizlabs/php_codesniffer": "1.5.*"
     },
     "scripts": {
         "post-install-cmd": [
