@@ -1,0 +1,48 @@
+default:
+  suites:
+    demo:
+      paths: [%paths.base%/features/demo.feature]
+      contexts: [DemoContext]
+    test:
+      paths: [%paths.base%/features/test.feature]
+
+  contexts:
+    DemoContext: []
+
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url:           'http://localhost/'
+      goutte:             ~
+      selenium2:
+        capabilities:
+          proxy:
+            proxyType:    autodetect
+        wd_host:          http://127.0.0.1:4444/wd/hub
+      default_session:    goutte
+      javascript_session: selenium2
+
+    VIPSoft\CodeCoverageExtension\Extension:
+      auth:       ~
+      create:
+        method:   POST
+        path:     /_coverage/
+      read:
+        method:   GET
+        path:     /_coverage/
+      delete:
+        method:   DELETE
+        path:     /_coverage/
+      drivers:
+        - remote
+        - local
+      #filter: ~
+      filter:
+        whitelist:
+          include:
+            directories:
+              'src':
+                 suffix: .php
+      report:
+        format:   html
+        options:
+          target: /var/www/bdd-demo/web/behat-coverage
